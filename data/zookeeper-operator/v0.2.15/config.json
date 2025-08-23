@@ -1,0 +1,20 @@
+{
+    "deploy": {
+        "steps": [
+            {
+                "apply": {
+                    "file": "data/zookeeper-operator/v0.2.15/operator.yaml",
+                    "operator": true
+                }
+            }
+        ]
+    },
+    "crd_name": "zookeeperclusters.zookeeper.pravega.io",
+    "custom_oracle": "data.zookeeper-operator.oracle",
+    "seed_custom_resource": "data/zookeeper-operator/cr.yaml",
+    "example_dir": "data/zookeeper-operator/examples",
+    "diff_ignore_fields": [
+        "\\['config_map'\\]\\['zookeeper\\-operator\\-lock'\\]\\['metadata'\\]\\['owner_references'\\]\\[.*\\]\\['name'\\]",
+        "\\['service'\\]\\['test\\-cluster\\-admin\\-server'\\]\\['spec'\\]\\['ports'\\]\\[.*\\]\\['node_port'\\]"
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "deploy": {
+        "steps": [
+            {
+                "apply": {
+                    "file": "data/cockroach-operator/operator.yaml",
+                    "operator": true
+                }
+            }
+        ]
+    },
+    "crd_name": null,
+    "custom_module": "data.cockroach-operator.custom_mapping",
+    "seed_custom_resource": "data/cockroach-operator/cr.yaml",
+    "example_dir": "data/cockroach-operator/examples",
+    "analysis": {
+        "github_link": "https://github.com/cockroachdb/cockroach-operator.git",
+        "commit": "d84779cf14612576703e2cea4c9bff153570e8b3",
+        "entrypoint": "cmd/cockroach-operator",
+        "type": "CrdbCluster",
+        "package": "github.com/cockroachdb/cockroach-operator/apis/v1alpha1"
+    }
+}
